@@ -1,0 +1,52 @@
+/* .App-container {
+    background-color: #FAEFE1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.App-body{
+    display: flex;
+    flex-direction: row;
+}
+.App-body-left {
+    display: flex;
+    flex-direction: column;    
+    width: 100px;
+    background-color: #4BCBE3;
+}
+.App-body-mid {
+    display: flex;
+    flex-direction: column;
+}
+.text-main {
+    position: absolute;
+    width: 438px;
+    height: 439px;
+    left: 768px;
+    top: 191px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    display: flex;
+    align-items: center;
+    color: #2E465E;
+}
+
+.thin-text {
+} */
+img {
+
+position: absolute;
+/* left: 11.25%; */
+/* right: 43.59%;
+top: 13.58%; */
+bottom: 11.2%;
+
+/* background: url(img4.png); */
+}
