@@ -5,16 +5,18 @@ import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/home'
 import Forums from './pages/forums/forums';
 import Events from './pages/events/events.js';
+import Login from './pages/loginpage/login';
 // import OnlineTherapy from './pages/OnlineTherapy';
 
 function App() {
   return (
     <div className="App"><div className='App-header'>
-      <Navbar />
+       <Navbar /> 
        <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/forums" element={<Forums/>} />
         <Route path="/events" element={<Events/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </div>
     </div>

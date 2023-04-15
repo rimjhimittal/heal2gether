@@ -4,19 +4,19 @@
 }
 
 
-img {
+.logo  {
     position: absolute;
     border-radius: 0 0 60px 0;
     width: 231px;
     height: 218px; 
-    left: -40px;
-    top: -40px; 
+    left: -20px;
+    top: -20px; 
     /* background: #2E465E */
 }
 .pages {
 display: flex;
 flex-direction: row;
-align-items: flex-end;
+/* align-items: flex-end; */
 padding: 0px;
 gap: 22px;
 

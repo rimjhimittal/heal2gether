@@ -1,3 +1,3 @@
-// Export default
-export default require('./vector1.png');
+// // Export default
+// export default require('./vector1.png');
 

@@ -1,0 +1,21 @@
+.register {
+    position: absolute;
+width: 853px;
+height: 554px;
+/* left: 213px;
+top: 139px; */
+
+background: #F1E2CF;
+border-radius: 30px;
+}
+
+.register2 {
+    
+position: absolute;
+width: 767px;
+height: 481px;
+/* left: 256px;
+top: 175px; */
+background: #FFFCF9;
+border-radius: 30px;
+}

@@ -1,6 +1,6 @@
-.App-body-left { 
+.App-body { 
     width: 100px;
-    height: 4000px;
+    left: -1000px;
     background-color: #4BCBE3;
-    left: 0px;
+    
 }
