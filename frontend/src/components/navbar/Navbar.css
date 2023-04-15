@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Inder;
+    src: url(../../assets/Inder-Regular.ttf);
+}
+
+
+img {
+    position: absolute;
+    border-radius: 0 0 60px 0;
+    width: 231px;
+    height: 218px; 
+    left: -40px;
+    top: -40px; 
+    /* background: #2E465E */
+}
+.pages {
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 22px;
+
+position: absolute;
+/* width: 850px; */
+height: 65px;
+left: 367px;
+top: 33px;
+}
+
+a{
+    width: 84px;
+    height: 45px;
+    margin-left: 60px;
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    
+    color: #2E465E;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
