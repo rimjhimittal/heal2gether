@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-#from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt import RefreshToken
 
 from . import serializers
 
