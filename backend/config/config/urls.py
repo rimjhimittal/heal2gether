@@ -23,4 +23,4 @@ urlpatterns = [
     path("", include("Auth.urls", namespace="Auth")),
     path("post/", include("posts.urls", namespace="posts")),
 
-]+  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   project-name:
-    image: ccs/quotes
+    image: ccs/s-m
     build:
       context: .
       dockerfile: ./Dockerfile
