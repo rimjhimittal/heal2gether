@@ -28,28 +28,27 @@ You can now run the development server:
 
 #### Register
 
-```http
-  POST /register/
-```
+
+   POST /register/
+
 username,email,password  
 
 
 
 #### Login
 
-```http
   POST login/
-```
+
 email, password  
 
 
 #### upload / retrieving posts 
-```http
+
   POST post/
-```
-```http
+  email, title, body, category
+
   GET post/
-```
+
 
 
 
