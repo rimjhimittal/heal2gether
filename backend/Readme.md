@@ -49,7 +49,7 @@ email, password
 
   GET post/
 
-
+all JSON transactions
 
 
 
