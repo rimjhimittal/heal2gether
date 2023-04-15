@@ -10,7 +10,13 @@ import Register from './components/Register/Register';
 // import OnlineTherapy from './pages/OnlineTherapy';
 
 function App() {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    window.location.href = "/login";
+  }
+  
   return (
+
     <div className="App"><div className='App-header'>
       <Navbar />
        <Routes>

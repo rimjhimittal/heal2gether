@@ -75,7 +75,6 @@ export default function Register() {
       })
       .then((value) => {
         localStorage.setItem('token', response['token']);
-        localStorage.setItem('email', JSON.stringify(response['email']));
         window.location.href = "/home";
       });
     } else {
