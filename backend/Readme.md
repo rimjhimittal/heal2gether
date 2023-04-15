@@ -22,5 +22,38 @@ You can now run the development server:
     $ python manage.py runserver
 
 
+## API Reference
+
+### Authentication related Endpoints
+
+#### Register
+
+```http
+  POST /register/
+```
+username,email,password  
+
+
+
+#### Login
+
+```http
+  POST login/
+```
+email, password  
+
+
+#### upload / retrieving posts 
+```http
+  POST post/
+```
+```http
+  GET post/
+```
+
+
+
+
+
 
 
