@@ -3,11 +3,15 @@ from rest_framework import status
 from rest_framework.generics import GenericAPIView, RetrieveUpdateAPIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from rest_framework_simplejwt import RefreshToken
+from rest_framework.views import APIView
+from rest_framework.authentication import TokenAuthentication, SessionAuthentication, BasicAuthentication
+
+from rest_framework.authtoken.models import Token
+#from rest_framework_simplejwt import RefreshToken
 
 from . import serializers
+User= get_user_model()
 
-User = get_user_model()
 
 class UserRegisterationAPIView(GenericAPIView):
     """
@@ -16,15 +20,21 @@ class UserRegisterationAPIView(GenericAPIView):
 
     permission_classes = (AllowAny,)
     serializer_class = serializers.UserRegisterationSerializer
+    
+    
 
     def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user = serializer.save()
-        #token = RefreshToken.for_user(user)
-        data = serializer.data
-        #data["tokens"] = {"refresh": str(token), "access": str(token.access_token)}
-        return Response(data, status=status.HTTP_201_CREATED)
+        serializer= self.get_serializer(data=request.data)
+        print(serializer)
+    
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        else:
+            user = serializer.save()
+
+            user= User.objects.get(email= serializer.data['email'])
+            token_obj,_= Token.objects.get_or_create(user=user)
+            return Response({'message':"token generated",'payload':serializer.data,'token':token_obj.key}, status=status.HTTP_201_CREATED)
 
 class UserLoginAPIView(GenericAPIView):
     """
@@ -52,23 +62,19 @@ class UserLogoutAPIView(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def post(self, request, *args, **kwargs):
-        try:
-            #refresh_token = request.data["refresh"]
-            #token = RefreshToken(refresh_token)
-            #token.blacklist()
-            return Response(status=status.HTTP_205_RESET_CONTENT)
-        except Exception as e:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+        request.user.auth_token.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
 
-class UserAPIView(RetrieveUpdateAPIView):
+class UserAPIView(APIView):
     """
-    Get, Update user information
+    An endpoint to get all user details.
     """
+    def get(self, request, format=None):
+        users= User.objects.all()
+        serializer_class = serializers.CustomUserSerializer
+        userdata= serializer_class(users, many=True)
+        return Response(userdata.data)
+    
 
-    permission_classes = (IsAuthenticated,)
-    serializer_class = serializers.CustomUserSerializer
-
-    def get_object(self):
-        return self.request.user
-
-
+   

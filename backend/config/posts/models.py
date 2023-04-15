@@ -16,6 +16,7 @@ class Post(models.Model):
     title = models.CharField(_("Post title"), max_length=250)
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
+        
         related_name="posts",
         null=True,
         on_delete=models.SET_NULL,

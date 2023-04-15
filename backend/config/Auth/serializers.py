@@ -9,6 +9,11 @@ class CustomUserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields =('id', 'email', 'password')
 
+    def create(self, validated_data):
+        user= CustomUser.objects.create_user(validated_data['email'], validated_data['password'])
+        user.set_password(validated_data['password'])
+        return user
+
 class UserRegisterationSerializer(serializers.ModelSerializer):
     """
     Serializer class to serialize registration requests and create a new user.
@@ -16,7 +21,7 @@ class UserRegisterationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ("id", "username", "email", "password")
+        fields = ("username", "email", "password")
         extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
