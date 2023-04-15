@@ -22,7 +22,8 @@ class Post(models.Model):
     #     on_delete=models.SET_NULL,blank=True
     # )
     email=models.EmailField(max_length=254)
-    categories = models.ManyToManyField(Category, related_name="posts_list", blank=True)
+    #categories = models.ManyToManyField(Category, related_name="posts_list", blank=True)
+    categories=models.CharField(max_length=100)
     body = models.TextField(_("Post body"))
     likes = models.ManyToManyField(
         settings.AUTH_USER_MODEL, related_name="post_likes", blank=True
