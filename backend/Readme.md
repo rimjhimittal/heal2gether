@@ -37,14 +37,14 @@ username,email,password
 
 #### Login
 
-  POST login/
+  POST login/  
 
 email, password  
 
 
 #### upload / retrieving posts 
 
-  POST post/
+  POST post/  
   email, title, body, category
 
   GET post/
