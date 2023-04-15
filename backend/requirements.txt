@@ -1,8 +1,0 @@
-django>=3.2,<4.0
-gunicorn
-requests
-psycopg2-binary
-django-environ
-django-cors-headers
-djangorestframework
-pillow==9.3.0

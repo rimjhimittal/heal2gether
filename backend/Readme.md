@@ -3,7 +3,7 @@
 First clone the repository from Github and switch to the new directory:
 
    
-    $ cd backend
+    $ cd backend/config
     
 Activate the virtualenv for your project.
     
@@ -20,5 +20,7 @@ Then  apply the migrations:
 You can now run the development server:
 
     $ python manage.py runserver
+
+
 
 
