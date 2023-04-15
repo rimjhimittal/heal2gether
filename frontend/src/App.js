@@ -6,6 +6,7 @@ import Home from './pages/home/home'
 import Forums from './pages/forums/forums';
 import Events from './pages/events/events.js';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 // import OnlineTherapy from './pages/OnlineTherapy';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
        <Routes>
         <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/" element={<Home/>} />
         <Route path="/forums" element={<Forums/>} />
         <Route path="/events" element={<Events/>} />
