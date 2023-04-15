@@ -29,8 +29,9 @@ class PostReadSerializer(serializers.ModelSerializer):
         return likes
 
 class PostWriteSerializer(serializers.ModelSerializer):
-    author = serializers.HiddenField(default=serializers.CurrentUserDefault())
-
+    #author = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    email=serializers.EmailField()
+    
     class Meta:
         model = Post
         fields = "__all__"

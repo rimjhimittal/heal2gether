@@ -14,13 +14,14 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(_("Post title"), max_length=250)
-    author = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+    # author = models.ForeignKey(
+    #     settings.AUTH_USER_MODEL,
         
-        related_name="posts",
-        null=True,
-        on_delete=models.SET_NULL,
-    )
+    #     related_name="posts",
+    #     null=True,
+    #     on_delete=models.SET_NULL,blank=True
+    # )
+    email=models.EmailField(max_length=254)
     categories = models.ManyToManyField(Category, related_name="posts_list", blank=True)
     body = models.TextField(_("Post body"))
     likes = models.ManyToManyField(

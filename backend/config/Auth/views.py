@@ -76,5 +76,6 @@ class UserAPIView(APIView):
         userdata= serializer_class(users, many=True)
         return Response(userdata.data)
     
+    
 
    
