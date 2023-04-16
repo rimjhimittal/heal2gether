@@ -32,12 +32,12 @@ Heal2gether is a community-driven health forum that offers support for individua
 - Promotes a supportive and empathetic community for individuals with mental health concerns.
 
 Frontend:
--Login page:
+- Login page:
 ![Screenshot.png](https://github.com/sanya-mahajan/heal2gether/blob/main/frontend/src/assets/LoginPage.png)
 
--Home Page:
+- Home Page:
 ![Screenshot.png](https://github.com/sanya-mahajan/heal2gether/blob/main/frontend/src/assets/HomePage.png)
 
--Forums:
+- Forums:
 ![Screenshot.png](https://github.com/sanya-mahajan/heal2gether/blob/main/frontend/src/assets/Forum.png)
 
