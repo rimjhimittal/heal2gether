@@ -47,7 +47,14 @@ email, password
   POST post/  
   email, title, body, category
 
-  GET post/
+  GET post/  
+  returns profanity error if detected  
+  
+#### search
+
+  POST learn/search  
+ 
+  
 
 all JSON transactions
 
