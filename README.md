@@ -41,4 +41,4 @@ Frontend:
 - Forums:
 ![Screenshot.png](https://github.com/sanya-mahajan/heal2gether/blob/main/frontend/src/assets/Forum.png)
 
--Link to the figma file - [Figma](https://www.figma.com/file/zgoDXeXWtxTxRpzjDDYP0G/Untitled?t=7NB3ySIHSrsGUHpJ-6)
+- Link to the figma file - [Figma](https://www.figma.com/file/zgoDXeXWtxTxRpzjDDYP0G/Untitled?t=7NB3ySIHSrsGUHpJ-6)
